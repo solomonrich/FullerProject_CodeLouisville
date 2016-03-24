@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+    <title>Andrew Fuller Center</title>
+		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel="stylesheet" href="css/normalize.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+	</head>
+<body ng-app="myApp14">
+	
+<nav class="navbar navbar-default navbar-fixed-top active" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><i class="fa fa-home" style="font-size:20px;color:#b3b3b3"></i> Andrew Fuller Center </a>
+    </div>
+      <div id="hv1">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a  href="about.html">About</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="contributors.html">Contrabutions
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu" >
+                <li><a href="contributors.html">2016</a></li>
+                <li><a href="contrib2015.html">2015</a></li>
+                <li><a href="contrib2014.html">2014</a></li>
+                <li><a href="contrib2013.html">2013</a></li>
+                <li><a href="contrib2012.html">2012</a></li> 
+              </ul>
+            </li>
+            <li><a href="bookreviews.html">Reviews</a></li>        
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</nav>
+  
+<div class="banner">
+	<img src="pics/fullercenter.jpg" alt="The Andrew Fuller Center" class="logopic1" >
+</div>
+
+<div class="container" id="fontp1">
+  <h2 style="margin-bottom:40px">2014 Contributions</h2>
+  <h4>Select from the dropdown menu:</h4>
+    <div ng-controller="myCtrl14">
+      <p style="font-size:1em">
+          <select ng-model="selectedAuthor" ng-options="(x.month+' - '+x.name) for x in names2014 | orderBy:['month','name']"></select></p>
+       
+        <p>Author: {{selectedAuthor.name}}</p>
+        <p>Title: "{{selectedAuthor.title}}"</p>
+           <div class="paperimg">
+            <div class="transbox">
+              <div class="marg1">
+                <p id="bold"><br>{{selectedAuthor.head1}}</p><p id="pad">{{selectedAuthor.par1}}</p>
+                <p id="bold">{{selectedAuthor.head2}}</p><p id="pad">{{selectedAuthor.par2}}</p>
+                <p id="bold">{{selectedAuthor.head3}}</p><p id="pad">{{selectedAuthor.par3}}</p>
+                <p id="bold">{{selectedAuthor.head4}}</p><p id="pad">{{selectedAuthor.par4}}</p>
+                <p id="bold">{{selectedAuthor.head5}}</p><p id="pad">{{selectedAuthor.par5}}</p>
+                <p id="bold">{{selectedAuthor.head6}}</p><p id="pad">{{selectedAuthor.par6}}</p>
+                <p id="bold">{{selectedAuthor.head7}}</p><p id="pad">{{selectedAuthor.par7}}</p>
+                <p id="bold">{{selectedAuthor.head8}}</p><p id="pad">{{selectedAuthor.par8}}</p>
+                <p id="bold">{{selectedAuthor.head9}}</p><p id="pad">{{selectedAuthor.par9}}</p>
+                <p id="bold">{{selectedAuthor.head10}}</p><p id="pad">{{selectedAuthor.par10}}</p>
+                <p id="bold">{{selectedAuthor.head11}}</p><p id="pad">{{selectedAuthor.par11}}</p>
+                <p id="bold">{{selectedAuthor.head12}}</p><p id="pad">{{selectedAuthor.par12}}</p>
+                <p id="bold">{{selectedAuthor.head13}}</p><p id="pad">{{selectedAuthor.par13}}</p>
+                <p id="bold">{{selectedAuthor.head14}}</p><p id="pad">{{selectedAuthor.par14}}</p>
+                <p id="bold">{{selectedAuthor.head15}}</p><p id="pad">{{selectedAuthor.par15}}</p>
+                <a href="{{selectedAuthor.linkto}}" target='_blank'><p style="margin: 0 2%">{{selectedAuthor.link}}</p></a><br>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+  
+  <script src="ctrlrs14.js"></script>
+</body>
+<footer id="footer">
+  <p>
+    <a href="http://www.facebook.com/AndrewFullerCenter/" target='_blank'><i class="fa fa-facebook-square" style="font-size:30px;color:grey;margin-right:15px"></i></a> 
+    <a href="http://twitter.com/AFCBS" target='_blank'><i class="fa fa-twitter-square" style="font-size:30px;color:grey;margin-right:15px"></i></a> 
+    <a href="mailto:andrewfullercenter@sbts.edu"><i class="fa fa-envelope" style="font-size:30px;color:grey;margin-right:15px"></i></a>
+    <br>© 2008 – 2016, The Andrew Fuller Center of The Southern Baptist Theological Seminary</p>
+</footer>
+</html>
