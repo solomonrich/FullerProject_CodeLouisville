@@ -60,12 +60,27 @@
       <ul class="listli">
         <li id="bold2" style="text-decoration:underline">Mailing Address:</li>
           <p id="font1" style="padding:2% 0 0 3%">The Andrew Fuller Center<br>  The Southern Baptist Theological Seminary<br>  2825 Lexington Rd.<br>  Louisville, KY  40280</p>
-        <li id="font2"><a href="tel:502-897-4613"><i class="fa fa-phone-square" style="font-size:30px;color:grey;margin-right:15px"></i>(502) 897-4613</a></li><br>
+          
+        <li>
+          <div id="map"></div>
+          <script>
+            function initMap() {
+              var mapDiv = document.getElementById('map');
+              var map = new google.maps.Map(mapDiv, {
+                center: {lat: 38.247600, lng: -85.686036},
+                zoom: 15
+              });
+            }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+              async defer></script>
+        </li>
+        <li id="font2"><a href="tel:502-897-4613"><i class="fa fa-phone-square" style="font-size:30px;color:grey;margin-right:15px; margin-top:10px"></i>(502) 897-4613</a></li><br>
         <li id="font2"><a href="mailto:andrewfullercenter@sbts.edu"><i class="fa fa-envelope" style="font-size:30px;color:grey;margin-right:14px"></i>andrewfullercenter@sbts.edu</a></li>
       </ul>
-      <div>
-        <p id="bold2" style="padding:20px 0 10px">2014 Andrew Fuller Conference:</p>
-        <iframe width="420px" height="236px" src="https://www.youtube.com/embed/videoseries?list=PLBA1qC8OOEJD1ZjLdrOWzAAeEG8EgSyAt" frameborder="0" allowfullscreen></iframe>
+      <div style="margin-left:8px;margin-right:7px">
+        <p id="bold2" style="padding:20px 0 5px">2014 Andrew Fuller Conference:</p>
+        <iframe width="425px" height="240px" src="https://www.youtube.com/embed/videoseries?list=PLBA1qC8OOEJD1ZjLdrOWzAAeEG8EgSyAt" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
     <div style="padding:0 1% 5%">
@@ -73,6 +88,11 @@
     </div>
 
   </div>
+
+
+
+
+
 
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   
